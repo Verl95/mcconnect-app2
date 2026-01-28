@@ -483,4 +483,3 @@ const Bubble = ({ label, icon, color, txt='#FFF', onClick }) => (
 const Placeholder = ({ title, icon }) => (
   <div className="flex flex-col items-center justify-center h-96 text-gray-300"><div className="mb-4">{icon}</div><h2 className="text-lg font-bold text-gray-400">{title}</h2></div>
 );
-
