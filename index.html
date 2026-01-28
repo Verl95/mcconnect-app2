@@ -13,23 +13,18 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Fix for mobile height and scrolling */
       html, body { height: 100%; margin: 0; padding: 0; background-color: #F5F5F7; overscroll-behavior: none; }
     </style>
   </head>
   <body>
-    <h1 style="color: blue; font-size: 50px;">HTML IS WORKING</h1>
     <div id="root"></div>
-    
     <script type="module" src="/src/main.jsx"></script>
-  </body>
     
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => console.log('Success: ', reg.scope))
-            .catch(err => console.log('Failure: ', err));
+            .catch(err => console.log('SW fail', err));
         });
       }
     </script>
